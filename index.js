@@ -11,6 +11,8 @@ const dotenv = require('dotenv');
 dotenv.config();
 const app = express();
 
+const port = process.env.PORT || 5500;
+
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -132,6 +134,6 @@ app.get('/result', async (req, res)=>{
     res.render('result', {marks});
 });
 
-app.listen(5500, ()=>{
+app.listen(port, ()=>{
     console.log("Running on port 5500");
 });
