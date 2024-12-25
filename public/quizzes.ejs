@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freindship Quiz</title>
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Test your freindship with <%=username%></h2>
+
+        <div class="quiz-box">
+            <div class="input">
+                <label for="username">Enter Your Name: </label>
+                <input type="text" id="username">
+            </div>
+        </div>
+
+        <div class="quiz-box">
+            <p><b>No. 01: </b> What would your friend most likely do on a lazy weekend?</p>
+            <div class="opt-box">
+                <button class="option" onclick="optionSelected('1', 'a')">Play games</button>
+                <button class="option" onclick="optionSelected('1', 'b')">Read a book</button>
+                <button class="option" onclick="optionSelected('1', 'c')">Watch some movies</button>
+                <button class="option" onclick="optionSelected('1', 'd')">Use mobile phone</button>
+            </div>
+        </div>
+
+        <div class="quiz-box">
+            <p><b>No. 02: </b> If your friend could have any superpower, which would he choose?</p>
+            <div class="opt-box">
+                <button class="option" onclick="optionSelected('2', 'a')">Invisiblity</button>
+                <button class="option" onclick="optionSelected('2', 'b')">Super strength</button>
+                <button class="option" onclick="optionSelected('2', 'c')">Teleportation</button>
+                <button class="option" onclick="optionSelected('2', 'd')">Mind reading</button>
+            </div>
+        </div>
+
+        <div class="quiz-box">
+            <p><b>No. 03: </b> What is your friend's favorite type of cuisine?</p>
+            <div class="opt-box">
+                <button class="option" onclick="optionSelected('3', 'a')">Italian</button>
+                <button class="option" onclick="optionSelected('3', 'b')">Mexican</button>
+                <button class="option" onclick="optionSelected('3', 'c')">Chinese</button>
+                <button class="option" onclick="optionSelected('3', 'd')">Indian</button>
+            </div>
+        </div>
+        
+        <div class="quiz-box">
+            <p><b>No. 04: </b> Where would your friend love to go on their dream vacation?</p>
+            <div class="opt-box">
+                <button class="option" onclick="optionSelected('4', 'a')">Beach resort</button>
+                <button class="option" onclick="optionSelected('4', 'b')">Mountain hike</button>
+                <button class="option" onclick="optionSelected('4', 'c')">Urban city tour</button>
+                <button class="option" onclick="optionSelected('4', 'd')">Wildlife safari</button>
+            </div>
+        </div>
+        
+        <div class="quiz-box">
+            <p><b>No. 05: </b> What is your friend's favorite hobby?</p>
+            <div class="opt-box">
+                <button class="option" onclick="optionSelected('5', 'a')">Playing sports or games</button>
+                <button class="option" onclick="optionSelected('5', 'b')">Reading books</button>
+                <button class="option" onclick="optionSelected('5', 'c')">Playing video games</button>
+                <button class="option" onclick="optionSelected('5', 'd')">Wasting time</button>
+            </div>
+        </div>
+        
+        <div class="quiz-box">
+            <p><b>No. 06: </b> What is your friend's favorite season of the year?</p>
+            <div class="opt-box">
+                <button class="option" onclick="optionSelected('6', 'a')">Spring</button>
+                <button class="option" onclick="optionSelected('6', 'b')">Summer</button>
+                <button class="option" onclick="optionSelected('6', 'c')">Autumn</button>
+                <button class="option" onclick="optionSelected('6', 'd')">Winter</button>
+            </div>
+        </div>
+        
+        <div class="quiz-box">
+            <p><b>No. 07: </b> Is your friend more of a morning person or a night owl?</p>
+            <div class="opt-box">
+                <button class="option" onclick="optionSelected('7', 'a')">Morning person</button>
+                <button class="option" onclick="optionSelected('7', 'b')">Night owl</button>
+                <button class="option" onclick="optionSelected('7', 'c')">Both</button>
+                <button class="option" onclick="optionSelected('7', 'd')">Neither</button>
+            </div>
+        </div>
+        
+        <div class="quiz-box">
+            <p><b>No. 08: </b> What is your friend's go-to beverage?</p>
+            <div class="opt-box">
+                <button class="option" onclick="optionSelected('8', 'a')">Coffee</button>
+                <button class="option" onclick="optionSelected('8', 'b')">Tea</button>
+                <button class="option" onclick="optionSelected('8', 'c')">Soda</button>
+                <button class="option" onclick="optionSelected('8', 'd')">Juice</button>
+            </div>
+        </div>
+        
+        <div class="quiz-box">
+            <p><b>No. 9: </b> How many hours of sleep does your friend typically get on a weeknight?</p>
+            <div class="opt-box">
+                <button class="option" onclick="optionSelected('9', 'a')">7-8 hours</button>
+                <button class="option" onclick="optionSelected('9', 'b')">5-6 hours</button>
+                <button class="option" onclick="optionSelected('9', 'c')">8+ hours</button>
+                <button class="option" onclick="optionSelected('9', 'd')">Less than 5 hours</button>
+            </div>
+        </div>
+        
+        <div class="quiz-box">
+            <p><b>No. 10: </b> What is the first thing your friend does when they wake up?</p>
+            <div class="opt-box">
+                <button class="option" onclick="optionSelected('10', 'a')">Check their phone</button>
+                <button class="option" onclick="optionSelected('10', 'b')">Drink a cup of coffee or tea</button>
+                <button class="option" onclick="optionSelected('10', 'c')">Do some exercise</button>
+                <button class="option" onclick="optionSelected('10', 'd')">Get ready</button>
+            </div>
+        </div>        
+
+        <div class="btn-cont quiz-box">
+            <button class="submit" onclick="submitOptions()">Submit</button>
+        </div>
+    </div>
+
+    <script>
+        let name = '<%=username%>';
+        const data = {person: name};
+
+        let input = document.getElementById('username');
+        
+        const optionSelected = (num, opt) => {
+            data.username = input.value;
+            let index = 'question' + num;
+            data[index] = opt;
+            let btns = document.getElementsByClassName('opt-box')[num-1].childNodes;
+            btns.forEach(btn => btn.disabled = true);
+            event.target.style.border = '2px solid blue'
+            console.log(data)
+        }
+
+        const submitOptions = () =>{
+            if (Object.keys(data).length == 12){
+                fetch('/quizzesSubmit', {
+                    method: 'POST',
+                    body: JSON.stringify(data),
+                    headers: {
+                        "Content-type": "application/json; charset=UTF-8"
+                    }
+                }).then((res)=>{
+                    window.location.href = res.url;
+                });
+            }else{
+                alert('You didn\'t answered all questions check again!')
+            }
+        }    
+    </script>
+</body>
+</html>

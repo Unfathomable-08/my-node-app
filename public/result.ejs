@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+    <div class="container result">
+        <h1 class="abs">Your Marks</h1>
+        <div class="circle-cont">
+            <div class="circle"></div>
+            <div class="inner-circle"><%=marks*10%>%</div>
+        </div>
+    </div>
+    <script>
+        let percentage = "<%=marks%>";
+        let ring = document.getElementsByClassName("circle")[0];
+
+        ring.style.background = `conic-gradient(green 0% ${percentage*10}%, red ${percentage*10}% 100%)`
+    </script>
+</body>
+</html>

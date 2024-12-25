@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Sign Up | Log In</title>
+</head>
+
+<body>
+    <div class="signup-container">
+        <form action="/signup" method="POST" class="signup-form">
+            <h2>Enter Details</h2>
+
+            <!-- Username Input -->
+            <input placeholder="Username" name="username" required />
+            <i class="fa-solid fa-user"></i>
+            <br />
+
+            <!-- Country Input -->
+            <input placeholder="Country" name="country" required />
+            <i class="fa-solid fa-globe"></i>
+            <br />
+
+            <!-- Password Input -->
+            <input placeholder="Password" name="password" type="password" required />
+            <i class="fa-solid fa-lock"></i>
+            <br />
+
+            <!-- Submit Button -->
+            <div class="signup-btn">
+                <button type="submit">Instant Quiz</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        const searchParams = new URLSearchParams(window.location.search);
+        const msg = searchParams.get('message');
+        if(msg){
+            alert(msg);
+        }
+    </script>
+</body>
+
+</html>
