@@ -135,7 +135,7 @@ app.get('/result', async (req, res)=>{
     res.render('result', {marks});
 });
 
-app.listen(port, ()=>{
+app.listen(port, '0.0.0.0', ()=>{
     console.log("Running on port 5500");
 });
 

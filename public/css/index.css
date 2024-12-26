@@ -89,7 +89,7 @@
 }
 
 .quiz-box {
-    width: 70%;
+    width: 80%;
     margin: 10px 0;
     border: 1px solid black;
     border-radius: 25px;
@@ -101,8 +101,8 @@
 }
 
 .opt-box {
-    width: 90%;
-    padding: 0 5% 25px 5%;
+    width: 80%;
+    padding: 0 10% 25px 10%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
@@ -254,7 +254,7 @@
 
 @media (min-width: 485px) {
     .signup-form, .quiz-box, .circle-cont, .link {
-        width: 60vw;
+        width: 80vw;
     }
 }
 
