@@ -101,8 +101,8 @@
 }
 
 .opt-box {
-    width: 80%;
-    padding: 0 10% 25px 10%;
+    width: 90%;
+    padding: 0 5% 25px 5%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
@@ -184,7 +184,7 @@
 .circle-cont {
     background-color: #ffffff55;
     height: 60vh;
-    width: 70vw;
+    width: 80vw;
     display: flex;
     align-self: center;
     margin-bottom: 100px;
@@ -226,7 +226,7 @@
 /* link */
 
 .link {
-    width: 70vw;
+    width: 80vw;
     height: 60px;
     background-color: #ffffff88;
     border-radius: 10px;
@@ -236,7 +236,7 @@
 }
 
 .link-text {
-    margin: 0 25px;
+    margin: 0 15px;
     color: #000;
     background-color: #ffffffcc;
     padding: 3px 15px;
