@@ -41,10 +41,10 @@
         const username = searchParams.get('username');
 
         const el = document.getElementsByClassName('link-text')[0];
-        el.innerHTML = `funspark.glitch.me/quizzes?username=${username}`;
+        el.innerHTML = `funspark.vercel.app/quizzes?username=${username}`;
 
         function copyLink() {
-            navigator.clipboard.writeText(`funspark.onrender.app/quizzes?username=${username}`)
+            navigator.clipboard.writeText(`funspark.vercel.app/quizzes?username=${username}`)
             .catch(function(err) {
                 console.error("Error copying text: ", err);
             });
