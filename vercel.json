@@ -1,0 +1,19 @@
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "index.js",
+            "use": "@vercel/node"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/index.js"
+        }
+    ],
+    "env": {
+        "uri": "mongodb+srv://muhammad124711:124711@cluster0.fk07o.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+        "secret": "FREindSHIP-QUiz-SECRet-KEy-SOMEthing-StronG"
+    }
+}

@@ -137,3 +137,5 @@ app.get('/result', async (req, res)=>{
 app.listen(port, ()=>{
     console.log("Running on port 5500");
 });
+
+module.exports = app;
