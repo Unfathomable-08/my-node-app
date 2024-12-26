@@ -51,7 +51,7 @@ app.post('/signup', async (req, res)=>{
         if (match){
             const token = jwt.sign({ username: existingUser.username }, process.env.secret, { expiresIn: '10d' });
             res.cookie('token', token, {httpOnly: true, secure: true});
-            return res.redirect(`/marks?userame=${req.body.username}`);
+            return res.redirect(`/marks?username=${req.body.username}`);
         }
         else {
             res.redirect('/signup?message=Username already exist with different password');
@@ -78,7 +78,7 @@ app.post('/signup', async (req, res)=>{
 
 app.post('/optionsSubmit', async (req, res)=>{
     await QuizDB.collection.insertOne(req.body);
-    res.redirect(`/marks?userame=${req.body.username}`);
+    res.redirect(`/marks?username=${req.body.username}`);
 });
 
 //quiz page
